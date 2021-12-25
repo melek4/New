@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Usercateg{% endblock %}
+
+{% block body %}
+    <h1>Create new Usercateg</h1>
+
+    {{ include('usercateg/_form.html.twig') }}
+
+    <a href="{{ path('usercateg_index') }}">back to list</a>
+{% endblock %}

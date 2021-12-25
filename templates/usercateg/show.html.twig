@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Usercateg{% endblock %}
+
+{% block body %}
+    <h1>Usercateg</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ usercateg.id }}</td>
+            </tr>
+            <tr>
+                <th>Label</th>
+                <td>{{ usercateg.label }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('usercateg_index') }}">back to list</a>
+
+    <a href="{{ path('usercateg_edit', {'id': usercateg.id}) }}">edit</a>
+
+    {{ include('usercateg/_delete_form.html.twig') }}
+{% endblock %}
